@@ -6,8 +6,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
-
+#ifndef __APPLE__
+    #include <malloc.h>
+#endif
 #include "tools.h"
 #include "my_getopt.h"
 #include "ecc.h"

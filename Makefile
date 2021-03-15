@@ -7,8 +7,8 @@ DEFINES = -DLARGE_FILES -D_FILE_OFFSET_BITS=64
 LIBS = -lcrypto
 
 CC = gcc
-CFLAGS = -Wall -W -Os
-LDFLAGS =
+CFLAGS = -Wall -W -Os -I/usr/local/opt/openssl/include
+LDFLAGS = -L/usr/local/opt/openssl/lib
 
 
 OBJS = $(patsubst %,%.o,$(PROGS) $(ZESTIG)) $(COMMON) $(ZESTIGL)
